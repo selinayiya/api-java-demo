@@ -1,5 +1,5 @@
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951913345#POST#/v4/order#{"symbol":"BTC_USDT","side":"BUY","bizType":"SPOT","quantity":2,"price":3,"type":"LIMIT","timeInForce":"GTC"}
-request====POST Request Url: https://sapi.az.com/v4/order
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951913345#POST#/az/spot/order#{"symbol":"BTC_USDT","side":"BUY","bizType":"SPOT","quantity":2,"price":3,"type":"LIMIT","timeInForce":"GTC"}
+request====POST Request Url: https://sapi.az.com/az/spot/order
 Request Headers: 
     validate-timestamp: 1666951913345
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -17,8 +17,8 @@ Request Body:
 	
 	
 	
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951950607#GET#/v4/order/156201996458139136
-request====GET Request Url: https://sapi.az.com/v4/order/156201996458139136
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951950607#GET#/az/spot/order/156201996458139136
+request====GET Request Url: https://sapi.az.com/az/spot/order/156201996458139136
 Request Headers: 
     validate-timestamp: 1666951950607
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -34,8 +34,8 @@ Request Body:
     null
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951978728#GET#/v4/order#orderId=156201996458139136
-request====GET Request Url: https://sapi.az.com/v4/order?orderId=156201996458139136
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951978728#GET#/az/spot/order#orderId=156201996458139136
+request====GET Request Url: https://sapi.az.com/az/spot/order?orderId=156201996458139136
 Request Headers: 
     validate-timestamp: 1666951978728
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -51,8 +51,8 @@ Request Body:
     null
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951993271#DELETE#/v4/order/156201996458139136
-request====DELETE Request Url: https://sapi.az.com/v4/order/156201996458139136
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666951993271#DELETE#/az/spot/order/156201996458139136
+request====DELETE Request Url: https://sapi.az.com/az/spot/order/156201996458139136
 Request Headers: 
     validate-timestamp: 1666951993271
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -68,8 +68,8 @@ Request Body:
     null
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952015274#GET#/v4/batch-order#orderIds=156201996458139136,12312313212
-request====GET Request Url: https://sapi.az.com/v4/batch-order?orderIds=156201996458139136,12312313212
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952015274#GET#/az/spot/batch-order#orderIds=156201996458139136,12312313212
+request====GET Request Url: https://sapi.az.com/az/spot/batch-order?orderIds=156201996458139136,12312313212
 Request Headers: 
     validate-timestamp: 1666952015274
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -86,8 +86,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952040890#DELETE#/v4/batch-order#{"orderIds":[156201996458139136,12312313212],"clientBatchId":"123123111"}
-request====DELETE Request Url: https://sapi.az.com/v4/batch-order
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952040890#DELETE#/az/spot/batch-order#{"orderIds":[156201996458139136,12312313212],"clientBatchId":"123123111"}
+request====DELETE Request Url: https://sapi.az.com/az/spot/batch-order
 Request Headers: 
     validate-timestamp: 1666952040890
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -105,8 +105,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952060915#GET#/v4/open-order
-request====GET Request Url: https://sapi.az.com/v4/open-order
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952060915#GET#/az/spot/open-order
+request====GET Request Url: https://sapi.az.com/az/spot/open-order
 Request Headers: 
     validate-timestamp: 1666952060915
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -123,8 +123,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952075363#DELETE#/v4/open-order#{"bizType":"SPOT"}
-request====DELETE Request Url: https://sapi.az.com/v4/open-order
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952075363#DELETE#/az/spot/open-order#{"bizType":"SPOT"}
+request====DELETE Request Url: https://sapi.az.com/az/spot/open-order
 Request Headers: 
     validate-timestamp: 1666952075363
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -142,8 +142,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952091964#GET#/v4/history-order#bizType=SPOT
-request====GET Request Url: https://sapi.az.com/v4/history-order?bizType=SPOT
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952091964#GET#/az/spot/history-order#bizType=SPOT
+request====GET Request Url: https://sapi.az.com/az/spot/history-order?bizType=SPOT
 Request Headers: 
     validate-timestamp: 1666952091964
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -160,8 +160,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952112143#GET#/v4/trade#bizType=SPOT
-request====GET Request Url: https://sapi.az.com/v4/trade?bizType=SPOT
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952112143#GET#/az/spot/trade#bizType=SPOT
+request====GET Request Url: https://sapi.az.com/az/spot/trade?bizType=SPOT
 Request Headers: 
     validate-timestamp: 1666952112143
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -178,8 +178,8 @@ Request Body:
 
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952127122#GET#/v4/balance#currency=usdt
-request====GET Request Url: https://sapi.az.com/v4/balance?currency=usdt
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952127122#GET#/az/spot/balance#currency=usdt
+request====GET Request Url: https://sapi.az.com/az/spot/balance?currency=usdt
 Request Headers: 
     validate-timestamp: 1666952127122
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -195,8 +195,8 @@ Request Body:
     null
 
 
-origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952141599#GET#/v4/balances#currencies=usdt,btc
-request====GET Request Url: https://sapi.az.com/v4/balances?currencies=usdt,btc
+origion===validate-algorithms=HmacSHA256&validate-appkey=a8487f72-de99-4242-9c13-1a885c61c1b0&validate-recvwindow=6000&validate-timestamp=1666952141599#GET#/az/spot/balances#currencies=usdt,btc
+request====GET Request Url: https://sapi.az.com/az/spot/balances?currencies=usdt,btc
 Request Headers: 
     validate-timestamp: 1666952141599
     Accept: text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8

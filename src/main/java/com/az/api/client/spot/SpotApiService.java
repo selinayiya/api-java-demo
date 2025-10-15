@@ -13,25 +13,25 @@ import retrofit2.http.*;
  */
 public interface SpotApiService {
 
-    @POST("/v4/order")
+    @POST("/az/spot/order")
     Call<CommonResponse> postOrder(@Body SpotPostOrderRequest request);
 
-    @GET("/v4/order/{id}")
+    @GET("/az/spot/order/{id}")
     Call<CommonResponse> getOrder(@Path("id")Long id);
 
-    @GET("/v4/order")
+    @GET("/az/spot/order")
     Call<CommonResponse> queryOrder(@Query("orderId") Long orderId);
 
-    @DELETE("/v4/order/{id}")
+    @DELETE("/az/spot/order/{id}")
     Call<CommonResponse> delOrder(@Path("id")Long id);
 
-    @PUT("/v4/order/{id}")
+    @PUT("/az/spot/order/{id}")
     Call<CommonResponse> updateOrder(@Path("id")Long id, @Body SpotUpdateOrderRequest request);
 
-    @PUT("/v4/etf/net-worth")
+    @PUT("/az/spot/etf/net-worth")
     Call<CommonResponse> netWorth(@Body NetworthUpdateRequest request);
 
-    @GET("/v4/nft/order/history")
+    @GET("/az/spot/nft/order/history")
     Call<CommonResponse> nftHistoryOrder(@Query("type") Integer type,
                                          @Query("status") Integer status, @Query("currencyId") String currency,
                                          @Query("startTime") Long startTime, @Query("endTime") Long endTime,

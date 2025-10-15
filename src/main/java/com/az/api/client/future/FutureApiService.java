@@ -15,57 +15,57 @@ import java.util.Map;
  */
 public interface FutureApiService {
 
-    @POST("/future/trade/v1/order/create")
+    @POST("/az/future/trade/v1/order/create")
     Call<FutureCommonResponse> makeOrder(@QueryMap Map<String, String> params);
 
-    @POST("/future/trade/v1/order/create")
+    @POST("/az/future/trade/v1/order/create")
     Call<FutureCommonResponse> postOrder(@Body FuturePostOrderRequest futurePostOrderRequest);
 
-    @POST("/future/trade/v1/order/create-batch")
+    @POST("/az/future/trade/v1/order/create-batch")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> batchOrder(@Query("list") String list);
 
-    @GET("/future/trade/v1/order/list-history")
+    @GET("/az/future/trade/v1/order/list-history")
     Call<FutureCommonResponse> orderListHistory(@QueryMap Map<String, String> params);
 
-    @GET("/future/trade/v1/order/trade-list")
+    @GET("/az/future/trade/v1/order/trade-list")
     Call<FutureCommonResponse> orderTradeList(@QueryMap Map<String, String> params);
 
-    @GET("/future/trade/v1/order/detail")
+    @GET("/az/future/trade/v1/order/detail")
     Call<FutureCommonResponse> orderDetail(@Query("orderId") Long orderId);
 
-    @GET("/future/trade/v1/order/list")
+    @GET("/az/future/trade/v1/order/list")
     Call<FutureCommonResponse> orderList(@QueryMap Map<String, String> params);
 
-    @POST("/future/trade/v1/order/cancel")
+    @POST("/az/future/trade/v1/order/cancel")
     Call<FutureCommonResponse> orderCancel(@Body FutureOrderCancelRequest request);
 
-    @POST("/future/trade/v1/order/cancel-all")
+    @POST("/az/future/trade/v1/order/cancel-all")
     Call<FutureCommonResponse> allCancel(@Body FutureOrderCancelAllRequest request);
 
-    @POST("/future/trade/v1/entrust/create-plan")
+    @POST("/az/future/trade/v1/entrust/create-plan")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> entrustCreatePlan(@QueryMap Map<String, String> params);
 
-    @POST("/future/trade/v1/entrust/cancel-plan")
+    @POST("/az/future/trade/v1/entrust/cancel-plan")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> entrustCancelPlan(@Query("entrustId") Long entrustId);
 
-    @POST("/future/trade/v1/entrust/cancel-all-plan")
+    @POST("/az/future/trade/v1/entrust/cancel-all-plan")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> entrustCancelAllPlan(@Query("symbol") String symbol);
 
-    @GET("/future/user/v1/account/info")
+    @GET("/az/future/user/v1/account/info")
     Call<FutureCommonResponse> accountInfo();
 
-    @GET("/future/user/v1/balance/detail")
+    @GET("/az/future/user/v1/balance/detail")
     Call<FutureCommonResponse> balanceDetail(@Query("coin") String coin);
 
-    @GET("/future/user/v1/user/listen-key")
+    @GET("/az/future/user/v1/user/listen-key")
     Call<FutureCommonResponse> listenKey();
 
 
-    @POST("/future/user/v1/position/adjust-leverage")
+    @POST("/az/future/user/v1/position/adjust-leverage")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> adjustLeverage(@Query("symbol") String symbol,@Query("positionSide") String positionSide,@Query("leverage") Integer leverage);
 
