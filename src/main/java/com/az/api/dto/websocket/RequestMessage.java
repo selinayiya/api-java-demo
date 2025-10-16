@@ -13,4 +13,5 @@ public class RequestMessage implements Serializable {
     private String method; //SUBSCRIBE
     private List<String> params;  //{topic}@{arg},{arg}
     private String id;
+    private String listenKey;
 }

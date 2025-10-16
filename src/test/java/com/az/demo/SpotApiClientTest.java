@@ -62,7 +62,7 @@ public class SpotApiClientTest {
                 .type("LIMIT")
                 .timeInForce("GTC")
                 .bizType("SPOT")
-                .price("100570")
+                .price("110000")
                 .quantity("0.001")
                 .media("btok")
                 .mediaChannel("btok123")
@@ -92,6 +92,12 @@ public class SpotApiClientTest {
     @Test
     public void updateOrder(){
         CommonResponse commonResponse = spotApiClient.updateOrder(407309222976613568L, SpotUpdateOrderRequest.builder().quantity("0.002").price("63010").build());
+        System.out.println("result:"+commonResponse);
+    }
+
+    @Test
+    public void getWsToken(){
+        CommonResponse commonResponse = spotApiClient.getWsToken();
         System.out.println("result:"+commonResponse);
     }
 }

@@ -32,4 +32,6 @@ public interface SpotApiClient {
     CommonResponse delOrder(Long id);
 
     CommonResponse updateOrder(Long id, SpotUpdateOrderRequest request);
+
+    CommonResponse getWsToken();
 }

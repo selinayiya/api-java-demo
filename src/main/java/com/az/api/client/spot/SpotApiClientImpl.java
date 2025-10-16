@@ -83,6 +83,11 @@ public class SpotApiClientImpl implements SpotApiClient {
         return executeSync(service.updateOrder(id,request));
     }
 
+    @Override
+    public CommonResponse getWsToken() {
+        return executeSync(service.getWsToken());
+    }
+
     public CommonResponse executeSync(Call<CommonResponse> call) {
         try {
             Response<CommonResponse> response = call.execute();

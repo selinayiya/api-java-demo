@@ -42,4 +42,7 @@ public interface SpotApiService {
 
     @PUT("/az/spot/order/{id}")
     Call<CommonResponse> updateOrder(@Path("id")Long id, @Body SpotUpdateOrderRequest request);
+
+    @POST("/az/spot/ws-token")
+    Call<CommonResponse> getWsToken();
 }
