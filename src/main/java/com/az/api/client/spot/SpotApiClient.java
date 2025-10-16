@@ -32,10 +32,4 @@ public interface SpotApiClient {
     CommonResponse delOrder(Long id);
 
     CommonResponse updateOrder(Long id, SpotUpdateOrderRequest request);
-
-    CommonResponse netWorth(NetworthUpdateRequest request);
-
-    CommonResponse nftHistoryOrder(Integer type, Integer status, String currency,
-                                         Long startTime, Long endTime,
-                                         Integer pageIndex, Integer pageSize);
 }

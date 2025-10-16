@@ -62,7 +62,7 @@ public class SpotApiClientTest {
                 .type("LIMIT")
                 .timeInForce("GTC")
                 .bizType("SPOT")
-                .price("63000")
+                .price("100570")
                 .quantity("0.001")
                 .media("btok")
                 .mediaChannel("btok123")
@@ -73,26 +73,19 @@ public class SpotApiClientTest {
 
     @Test
     public void getOrder() {
-        CommonResponse commonResponse = spotApiClient.getOrder(351569051824340480L);
+        CommonResponse commonResponse = spotApiClient.getOrder(549142997112497088L);
         System.out.println("result:"+commonResponse);
     }
 
     @Test
     public void queryOrder() {
-        CommonResponse commonResponse = spotApiClient.queryOrder(274722413139647104L);
+        CommonResponse commonResponse = spotApiClient.queryOrder(549142997112497088L);
         System.out.println("result:"+commonResponse);
     }
 
     @Test
     public void delOrder() {
-        CommonResponse commonResponse = spotApiClient.delOrder(274722413139647104L);
-        System.out.println("result:"+commonResponse);
-    }
-
-    @Test
-    public void netWorth() {
-        NetworthUpdateRequest request = NetworthUpdateRequest.builder().symbol("btc3l_usdt").netWorth(BigDecimal.valueOf(1.2)).build();
-        CommonResponse commonResponse = spotApiClient.netWorth(request);
+        CommonResponse commonResponse = spotApiClient.delOrder(549142997112497088L);
         System.out.println("result:"+commonResponse);
     }
 
@@ -100,11 +93,5 @@ public class SpotApiClientTest {
     public void updateOrder(){
         CommonResponse commonResponse = spotApiClient.updateOrder(407309222976613568L, SpotUpdateOrderRequest.builder().quantity("0.002").price("63010").build());
         System.out.println("result:"+commonResponse);
-    }
-
-    @Test
-    public void nftHistoryOrder() {
-        CommonResponse commonResponse = spotApiClient.nftHistoryOrder(2, null, null, null, null, 1, 10);
-        System.out.println("result:" + commonResponse);
     }
 }

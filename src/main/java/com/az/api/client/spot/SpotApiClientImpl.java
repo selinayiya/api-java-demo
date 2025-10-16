@@ -83,16 +83,6 @@ public class SpotApiClientImpl implements SpotApiClient {
         return executeSync(service.updateOrder(id,request));
     }
 
-    @Override
-    public CommonResponse netWorth(NetworthUpdateRequest request) {
-        return executeSync(service.netWorth(request));
-    }
-
-    @Override
-    public CommonResponse nftHistoryOrder(Integer type, Integer status, String currency, Long startTime, Long endTime, Integer page, Integer size) {
-        return executeSync(service.nftHistoryOrder(type, status, currency, startTime, endTime, page, size));
-    }
-
     public CommonResponse executeSync(Call<CommonResponse> call) {
         try {
             Response<CommonResponse> response = call.execute();

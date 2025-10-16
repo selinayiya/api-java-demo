@@ -42,13 +42,4 @@ public interface SpotApiService {
 
     @PUT("/az/spot/order/{id}")
     Call<CommonResponse> updateOrder(@Path("id")Long id, @Body SpotUpdateOrderRequest request);
-
-    @PUT("/az/spot/etf/net-worth")
-    Call<CommonResponse> netWorth(@Body NetworthUpdateRequest request);
-
-    @GET("/az/spot/nft/order/history")
-    Call<CommonResponse> nftHistoryOrder(@Query("type") Integer type,
-                                         @Query("status") Integer status, @Query("currencyId") String currency,
-                                         @Query("startTime") Long startTime, @Query("endTime") Long endTime,
-                                         @Query("page") Integer page, @Query("size") Integer size);
 }
