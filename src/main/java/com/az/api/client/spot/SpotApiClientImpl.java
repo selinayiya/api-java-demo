@@ -19,7 +19,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
  */
 public class SpotApiClientImpl implements SpotApiClient {
 
-    private final static String API_URL = "https://sapi.az.com";
+    private final static String API_URL = "https://s-api.myaztests.com";
 
     private final SpotApiService service;
 
