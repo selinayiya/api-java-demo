@@ -17,6 +17,12 @@ import java.util.Map;
  */
 public abstract class AbstractFutureApiClient implements FutureApiClient {
     private final Gson gson = new Gson();
+
+    @Override
+    public FutureCommonResponse getPublicClient() {
+        return executeSync(getService().getPublicClient());
+    }
+
     @Override
     public FutureCommonResponse postOrder(FuturePostOrderRequest request) {
         return executeSync(getService().postOrder(request));

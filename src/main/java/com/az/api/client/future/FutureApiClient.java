@@ -14,6 +14,7 @@ import java.util.Map;
  */
 public interface FutureApiClient {
 
+    FutureCommonResponse getPublicClient();
 
     FutureCommonResponse postOrder(FuturePostOrderRequest request);
 

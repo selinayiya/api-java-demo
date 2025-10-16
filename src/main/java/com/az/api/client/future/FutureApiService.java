@@ -14,6 +14,8 @@ import java.util.Map;
  * @create 2023/9/20 14:28
  */
 public interface FutureApiService {
+    @GET("/az/future/public/client")
+    Call<FutureCommonResponse> getPublicClient();
 
     @POST("/az/future/trade/v1/order/create")
     Call<FutureCommonResponse> makeOrder(@QueryMap Map<String, String> params);

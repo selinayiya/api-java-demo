@@ -14,7 +14,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
  */
 public class UFutureApiClientImpl extends AbstractFutureApiClient {
 
-    private final static String API_URL = "https://fapi.az.com";
+    private final static String API_URL = "https://f-api.myaztests.com";
 
     private final FutureApiService service;
 

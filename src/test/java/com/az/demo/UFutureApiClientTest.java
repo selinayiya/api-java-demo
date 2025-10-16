@@ -19,6 +19,12 @@ public class UFutureApiClientTest {
     FutureApiClient client = new UFutureApiClientImpl(null);
 
     @Test
+    public void getPublicClient() {
+        FutureCommonResponse publicClient = client.getPublicClient();
+        System.out.println(publicClient);
+    }
+
+    @Test
     public void postOrder(){
         FuturePostOrderRequest request = FuturePostOrderRequest.builder().symbol("btc_usdt")
                 .origQty("4")
