@@ -23,11 +23,11 @@ public class RyzenUserWebSocketTest {
     @Before
     public void init(){
         try {
-            HttpProxyProperties properties = new HttpProxyProperties();
+//            HttpProxyProperties properties = new HttpProxyProperties();
 //            properties.setHost("127.0.0.1");
 //            properties.setEnabled(true);
 //            properties.setPort(7890);
-            webSocketClient = new WebSocketClient("wss://stream.az.com/public");
+            webSocketClient = new WebSocketClient("wss://s-ws.myaztests.com/public");
 //            webSocketClient.setProxy(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(properties.getHost(), properties.getPort())));
         } catch (URISyntaxException e) {
             e.printStackTrace();
@@ -55,6 +55,16 @@ public class RyzenUserWebSocketTest {
 
         RequestMessage requestMessage = RequestMessage.builder().id("001").method(Method.SUBSCRIBE.name()).params(params).build();
         webSocketClient.send(gson.toJson(requestMessage));
+
+        while (true){
+            try {
+                Thread.sleep(30000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("send msg ping");
+            webSocketClient.send("ping");
+        }
     }
 
     @Test
