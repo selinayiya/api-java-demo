@@ -4,6 +4,7 @@ import com.az.api.dto.CommonResponse;
 import com.az.api.dto.spot.NetworthUpdateRequest;
 import com.az.api.dto.spot.SpotPostOrderRequest;
 import com.az.api.dto.spot.SpotUpdateOrderRequest;
+import retrofit2.http.Query;
 
 
 /**
@@ -12,6 +13,15 @@ import com.az.api.dto.spot.SpotUpdateOrderRequest;
  */
 public interface SpotApiClient {
 
+    CommonResponse getPublicSymbol(String symbol, String symbols, String version);
+
+    CommonResponse getPublicDepth(String symbol, Long limit);
+
+    CommonResponse getPublicKLine(String symbol, String interval, Long startTime, Long endTime, Long limit);
+
+    CommonResponse getPublicTradeHistory(String symbol, Long limit, String direction, Long fromId);
+
+    CommonResponse getPublicRecentTrade(String symbol, Long limit);
 
     CommonResponse postOrder(SpotPostOrderRequest request);
 

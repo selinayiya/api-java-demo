@@ -34,6 +34,31 @@ public class SpotApiClientImpl implements SpotApiClient {
     }
 
     @Override
+    public CommonResponse getPublicSymbol(String symbol, String symbols, String version) {
+        return executeSync(service.getPublicSymbol(symbol, symbols, version));
+    }
+
+    @Override
+    public CommonResponse getPublicDepth(String symbol, Long limit) {
+        return executeSync(service.getPublicDepth(symbol, limit));
+    }
+
+    @Override
+    public CommonResponse getPublicKLine(String symbol, String interval, Long startTime, Long endTime, Long limit) {
+        return executeSync(service.getPublicKLine(symbol, interval, startTime, endTime, limit));
+    }
+
+    @Override
+    public CommonResponse getPublicTradeHistory(String symbol, Long limit, String direction, Long fromId) {
+        return executeSync(service.getPublicTradeHistory(symbol, limit, direction, fromId));
+    }
+
+    @Override
+    public CommonResponse getPublicRecentTrade(String symbol, Long limit) {
+        return executeSync(service.getPublicRecentTrade(symbol, limit));
+    }
+
+    @Override
     public CommonResponse postOrder(SpotPostOrderRequest request) {
         return executeSync(service.postOrder(request));
     }

@@ -13,6 +13,21 @@ import retrofit2.http.*;
  */
 public interface SpotApiService {
 
+    @GET("/az/spot/public/symbol")
+    Call<CommonResponse> getPublicSymbol(@Query("symbol") String symbol, @Query("symbols") String symbols, @Query("version") String version);
+
+    @GET("/az/spot/public/depth")
+    Call<CommonResponse> getPublicDepth(@Query("symbol") String symbol, @Query("limit") Long limit);
+
+    @GET("/az/spot/public/kline")
+    Call<CommonResponse> getPublicKLine(@Query("symbol") String symbol, @Query("interval") String interval, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Long limit);
+
+    @GET("/az/spot/public/trade/history")
+    Call<CommonResponse> getPublicTradeHistory(@Query("symbol") String symbol, @Query("limit") Long limit, @Query("direction") String direction, @Query("fromId") Long fromId);
+
+    @GET("/az/spot/public/trade/recent")
+    Call<CommonResponse> getPublicRecentTrade(@Query("symbol") String symbol, @Query("limit") Long limit);
+
     @POST("/az/spot/order")
     Call<CommonResponse> postOrder(@Body SpotPostOrderRequest request);
 

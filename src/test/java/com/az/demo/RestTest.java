@@ -17,6 +17,18 @@ import java.util.Map;
 public class RestTest {
 
     @Test
+    public void getServerTime() {
+        String uri = "/az/spot/public/time";
+        System.out.println("result====" + HttpUtil.get(uri, null));
+    }
+
+    @Test
+    public void getClientIp() {
+        String uri = "/az/spot/public/client";
+        System.out.println("result====" + HttpUtil.get(uri, null));
+    }
+
+    @Test
     public void testpostOrder() {
         String uri = "/az/spot/order";
         Map<String, Object> param = new HashMap<>();

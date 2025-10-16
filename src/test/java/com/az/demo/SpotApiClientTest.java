@@ -18,6 +18,43 @@ public class SpotApiClientTest {
 
     SpotApiClientImpl spotApiClient = new SpotApiClientImpl(null);
 
+
+    @Test
+    public void getPublicSymbol() {
+        String symbol = "btc_usdt";
+        CommonResponse commonResponse = spotApiClient.getPublicSymbol(symbol, null, null);
+        System.out.println("result:" + commonResponse);
+    }
+
+    @Test
+    public void getPublicDepth() {
+        String symbol = "btc_usdt";
+        CommonResponse publicDepth = spotApiClient.getPublicDepth(symbol, 200L);
+        System.out.println("result:" + publicDepth);
+    }
+
+    @Test
+    public void getPublicKLine() {
+        String symbol = "btc_usdt";
+        String interval = "1m";
+        CommonResponse publicKLine = spotApiClient.getPublicKLine(symbol, interval, null, null, null);
+        System.out.println("result:" + publicKLine);
+    }
+
+    @Test
+    public void getPublicTradeHistory() {
+        String symbol = "btc_usdt";
+        CommonResponse next = spotApiClient.getPublicTradeHistory(symbol, null, "NEXT", null);
+        System.out.println("result:" + next);
+    }
+
+    @Test
+    public void getPublicRecentTrade() {
+        String symbol = "btc_usdt";
+        CommonResponse publicRecentTrade = spotApiClient.getPublicRecentTrade(symbol, 200L);
+        System.out.println("result:" + publicRecentTrade);
+    }
+
     @Test
     public void testpostOrder() {
         SpotPostOrderRequest request = SpotPostOrderRequest.builder().symbol("btc_usdt")
