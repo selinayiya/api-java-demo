@@ -13,8 +13,8 @@ import java.util.TreeMap;
  * @create 2022/10/28 10:48
  */
 public class HttpUtil {
-    private static final String appKey = "1b87f9cb-cb32-462f-a7c6-ccc10d34cb37";
-    private static final String secretKey = "fa72a50ea097a1cedd4e9a6fce0542b413b862f1";
+    private static final String appKey = "f622d835-efc3-4e7f-94e6-952be8fdaf8d";
+    private static final String secretKey = "72b62c9868999910e312c8340b85390170e233fc";
     private static final String encry = "HmacSHA256";
     private static final String contentType = "application/json";
     private static final String baseUrl = "https://s-api.myaztests.com";

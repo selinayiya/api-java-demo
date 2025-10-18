@@ -66,6 +66,11 @@ public class SpotApiClientImpl implements SpotApiClient {
     }
 
     @Override
+    public CommonResponse getPublicTickerPrice(String symbol, List<String> symbols, String tags) {
+        return executeSync(service.getPublicTickerPrice(symbol, symbols, tags));
+    }
+
+    @Override
     public CommonResponse postOrder(SpotPostOrderRequest request) {
         return executeSync(service.postOrder(request));
     }

@@ -33,6 +33,9 @@ public interface SpotApiService {
     @GET("/az/spot/public/ticker")
     Call<CommonResponse>  getPublicTicker(@Query("symbol") String symbol, @Query("symbols") List<String> symbols, @Query("tags") String tags);
 
+    @GET("/az/spot/public/ticker/price")
+    Call<CommonResponse> getPublicTickerPrice(@Query("symbol") String symbol, @Query("symbols") List<String> symbols, @Query("tags") String tags);
+
     @POST("/az/spot/order")
     Call<CommonResponse> postOrder(@Body SpotPostOrderRequest request);
 

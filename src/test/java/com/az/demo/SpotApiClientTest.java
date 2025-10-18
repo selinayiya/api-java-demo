@@ -67,6 +67,14 @@ public class SpotApiClientTest {
     }
 
     @Test
+    public void getPublicTickerPrice() {
+//        String symbol = "btc_usdt";
+        List<String> symbols = Arrays.asList("btc_usdt", "eth_usdt");
+        CommonResponse commonResponse = spotApiClient.getPublicTickerPrice(null, symbols, null);
+        System.out.println("result:" + commonResponse);
+    }
+
+    @Test
     public void testpostOrder() {
         SpotPostOrderRequest request = SpotPostOrderRequest.builder().symbol("btc_usdt")
                 .side("BUY")

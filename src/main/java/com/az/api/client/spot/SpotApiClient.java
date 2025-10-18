@@ -27,6 +27,8 @@ public interface SpotApiClient {
 
     CommonResponse getPublicTicker(String symbol, List<String> symbols, String tags);
 
+    CommonResponse getPublicTickerPrice(String symbol, List<String> symbols, String tags);
+
     CommonResponse postOrder(SpotPostOrderRequest request);
 
     CommonResponse getOrder(Long id);
