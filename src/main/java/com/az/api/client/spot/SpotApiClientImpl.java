@@ -12,9 +12,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
+import java.util.List;
+
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 12:18
  */
 public class SpotApiClientImpl implements SpotApiClient {
@@ -56,6 +58,11 @@ public class SpotApiClientImpl implements SpotApiClient {
     @Override
     public CommonResponse getPublicRecentTrade(String symbol, Long limit) {
         return executeSync(service.getPublicRecentTrade(symbol, limit));
+    }
+
+    @Override
+    public CommonResponse getPublicTicker(String symbol, List<String> symbols, String tags) {
+        return executeSync(service.getPublicTicker(symbol, symbols, tags));
     }
 
     @Override

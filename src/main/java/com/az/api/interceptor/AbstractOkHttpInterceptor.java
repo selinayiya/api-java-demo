@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * filter and add header,generate sign for validate
  *
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/21 10:43
  */
 public abstract class AbstractOkHttpInterceptor implements Interceptor {

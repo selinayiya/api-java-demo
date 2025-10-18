@@ -9,7 +9,7 @@ import java.net.URISyntaxException;
 import java.util.Collections;
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/12/12 17:06
  */
 public class WebSocketClient extends org.java_websocket.client.WebSocketClient {

@@ -7,7 +7,7 @@ import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 15:47
  */
 public class OkHttpClientBuilder {

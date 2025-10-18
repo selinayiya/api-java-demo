@@ -8,10 +8,13 @@ import com.az.api.dto.spot.SpotUpdateOrderRequest;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * SPOT Business
- * @author selina
+ * @author az
  * @create 2023/9/20 16:15
  */
 public class SpotApiClientTest {
@@ -53,6 +56,14 @@ public class SpotApiClientTest {
         String symbol = "btc_usdt";
         CommonResponse publicRecentTrade = spotApiClient.getPublicRecentTrade(symbol, 200L);
         System.out.println("result:" + publicRecentTrade);
+    }
+
+    @Test
+    public void getPublicTicker() {
+//        String symbol = "btc_usdt";
+        List<String> symbols = Arrays.asList("btc_usdt", "eth_usdt");
+        CommonResponse commonResponse = spotApiClient.getPublicTicker(null, symbols, null);
+        System.out.println("result:" + commonResponse);
     }
 
     @Test

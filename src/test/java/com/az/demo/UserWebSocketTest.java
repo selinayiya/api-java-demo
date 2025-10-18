@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/12/12 16:36
  */
 public class UserWebSocketTest {
@@ -22,7 +22,7 @@ public class UserWebSocketTest {
     @Before
     public void init(){
         try {
-            webSocketClient = new WebSocketClient("wss://f-api.myaztests.com/ws/market");
+            webSocketClient = new WebSocketClient("wss://f-ws.myaztests.com/ws/market");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }

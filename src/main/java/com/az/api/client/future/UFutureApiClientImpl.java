@@ -9,7 +9,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 /**
  * U-BASE future
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 12:18
  */
 public class UFutureApiClientImpl extends AbstractFutureApiClient {

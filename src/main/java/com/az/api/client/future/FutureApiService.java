@@ -10,7 +10,7 @@ import retrofit2.http.*;
 import java.util.Map;
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 14:28
  */
 public interface FutureApiService {

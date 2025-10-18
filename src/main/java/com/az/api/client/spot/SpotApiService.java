@@ -7,8 +7,10 @@ import com.az.api.dto.spot.SpotUpdateOrderRequest;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.List;
+
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 14:28
  */
 public interface SpotApiService {
@@ -27,6 +29,9 @@ public interface SpotApiService {
 
     @GET("/az/spot/public/trade/recent")
     Call<CommonResponse> getPublicRecentTrade(@Query("symbol") String symbol, @Query("limit") Long limit);
+
+    @GET("/az/spot/public/ticker")
+    Call<CommonResponse>  getPublicTicker(@Query("symbol") String symbol, @Query("symbols") List<String> symbols, @Query("tags") String tags);
 
     @POST("/az/spot/order")
     Call<CommonResponse> postOrder(@Body SpotPostOrderRequest request);

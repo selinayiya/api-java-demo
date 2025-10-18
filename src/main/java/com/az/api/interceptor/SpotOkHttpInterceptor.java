@@ -5,7 +5,7 @@ import org.apache.commons.codec.digest.HmacUtils;
 
 /**
  * spot filter
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/21 10:43
  */
 public class SpotOkHttpInterceptor extends AbstractOkHttpInterceptor {

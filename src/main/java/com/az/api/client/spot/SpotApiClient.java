@@ -6,9 +6,11 @@ import com.az.api.dto.spot.SpotPostOrderRequest;
 import com.az.api.dto.spot.SpotUpdateOrderRequest;
 import retrofit2.http.Query;
 
+import java.util.List;
+
 
 /**
- * @author zhouzhuang
+ * @author az
  * @create 2023/9/20 11:48
  */
 public interface SpotApiClient {
@@ -22,6 +24,8 @@ public interface SpotApiClient {
     CommonResponse getPublicTradeHistory(String symbol, Long limit, String direction, Long fromId);
 
     CommonResponse getPublicRecentTrade(String symbol, Long limit);
+
+    CommonResponse getPublicTicker(String symbol, List<String> symbols, String tags);
 
     CommonResponse postOrder(SpotPostOrderRequest request);
 
