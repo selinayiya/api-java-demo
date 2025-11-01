@@ -7,6 +7,7 @@ import com.az.api.dto.future.FuturePostOrderRequest;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,8 +27,59 @@ public interface FutureApiService {
     @GET("/az/future/market/v3/public/symbol/list")
     Call<FutureCommonResponse> getPublicSymbolList();
 
+    @GET("/az/future/market/v1/public/leverage/bracket/detail")
+    Call<FutureCommonResponse> getPublicLeverageBracketDetail(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/leverage/bracket/list")
+    Call<FutureCommonResponse> getPublicLeverageBracketList();
+
+    @GET("/az/future/market/v1/public/q/ticker")
+    Call<FutureCommonResponse> getPublicQTicker(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/tickers")
+    Call<FutureCommonResponse> getPublicQTickersList();
+
+    @GET("/az/future/market/v1/public/q/deal")
+    Call<FutureCommonResponse> getPublicQDeal(@Query("symbol") String symbol, @Query("num") Integer num);
+
+    @GET("/az/future/market/v1/public/q/depth")
+    Call<FutureCommonResponse> getPublicQDepth(@Query("symbol") String symbol, @Query("level") Integer level);
+
+    @GET("/az/future/market/v1/public/q/symbol-index-price")
+    Call<FutureCommonResponse> getPublicQSymbolIndexPrice(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/index-price")
+    Call<FutureCommonResponse> getPublicQIndexPrice();
+
+    @GET("/az/future/market/v1/public/q/symbol-mark-price")
+    Call<FutureCommonResponse> getPublicQSymbolMarkPrice(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/mark-price")
+    Call<FutureCommonResponse> getPublicQMarketPrice(@Query("symbol") String symbol);
+
     @GET("/az/future/market/v1/public/q/best-price")
     Call<FutureCommonResponse> getBestPrice(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/kline")
+    Call<FutureCommonResponse> getPublicQKline(@Query("symbol") String symbol, @Query("interval") String interval, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Long limit);
+
+    @GET("/az/future/market/v1/public/q/agg-ticker")
+    Call<FutureCommonResponse> getPublicQAggTicker(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/funding-rate")
+    Call<FutureCommonResponse> getPublicQFundingRate(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/ticker/book")
+    Call<FutureCommonResponse> getPublicQTickerBook(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v1/public/q/funding-rate-record")
+    Call<FutureCommonResponse> getPublicQFundingRateRecord(@Query("symbol") String symbol, @Query("id") Long id, @Query("direction") String direction, @Query("limit") Long limit);
+
+    @GET("/az/future/market/v1/public/contract/risk-balance")
+    Call<FutureCommonResponse> getPublicContractRiskBalance(@Query("symbol") String symbol, @Query("id") Long id, @Query("direction") String direction, @Query("limit") Long limit);
+
+    @GET("/az/future/market/v1/public/contract/open-interest")
+    Call<FutureCommonResponse> getPublicContractOpenInterest(@Query("symbol") String symbol);
 
     @GET("/az/future/trade/v1/order/slim")
     Call<FutureCommonResponse> getOrderSlim(@Query("orderId") Long orderId);

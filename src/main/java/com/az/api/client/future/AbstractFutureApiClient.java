@@ -39,8 +39,93 @@ public abstract class AbstractFutureApiClient implements FutureApiClient {
     }
 
     @Override
+    public FutureCommonResponse getPublicLeverageBracketDetail(String symbol) {
+        return executeSync(getService().getPublicLeverageBracketDetail(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicLeverageBracketList() {
+        return executeSync(getService().getPublicLeverageBracketList());
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQTicker(String symbol) {
+        return executeSync(getService().getPublicQTicker(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQTickersList() {
+        return executeSync(getService().getPublicQTickersList());
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQDeal(String symbol, Integer num) {
+        return executeSync(getService().getPublicQDeal(symbol, num));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQDepth(String symbol, Integer level) {
+        return executeSync(getService().getPublicQDepth(symbol, level));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQSymbolIndexPrice(String symbol) {
+        return executeSync(getService().getPublicQSymbolIndexPrice(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQIndexPrice() {
+        return executeSync(getService().getPublicQIndexPrice());
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQSymbolMarkPrice(String symbol) {
+        return executeSync(getService().getPublicQSymbolMarkPrice(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQMarketPrice(String symbol) {
+        return executeSync(getService().getPublicQMarketPrice(symbol));
+    }
+
+    @Override
     public FutureCommonResponse getBestPrice(String symbol) {
         return executeSync(getService().getBestPrice(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQKline(String symbol, String interval, Long startTime, Long endTime, Long limit) {
+        return executeSync(getService().getPublicQKline(symbol, interval, startTime, endTime, limit));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQAggTicker(String symbol) {
+        return executeSync(getService().getPublicQAggTicker(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQFundingRate(String symbol) {
+        return executeSync(getService().getPublicQFundingRate(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQTickerBook(String symbol) {
+        return executeSync(getService().getPublicQTickerBook(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicQFundingRateRecord(String symbol, Long id, String direction, Long limit){
+        return executeSync(getService().getPublicQFundingRateRecord(symbol, id, direction, limit));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicContractRiskBalance(String symbol, Long id, String direction, Long limit) {
+        return  executeSync(getService().getPublicContractRiskBalance(symbol, id, direction, limit));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicContractOpenInterest(String symbol) {
+        return  executeSync(getService().getPublicContractOpenInterest(symbol));
     }
 
     @Override

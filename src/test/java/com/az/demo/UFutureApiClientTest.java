@@ -43,8 +43,110 @@ public class UFutureApiClientTest {
     }
 
     @Test
+    public void getPublicLeverageBracketDetail() {
+        FutureCommonResponse commonResponse = client.getPublicLeverageBracketDetail("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicLeverageBracketList() {
+        FutureCommonResponse commonResponse = client.getPublicLeverageBracketList();
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQTicker() {
+        FutureCommonResponse commonResponse = client.getPublicQTicker("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQTickersList() {
+        FutureCommonResponse commonResponse = client.getPublicQTickersList();
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQDeal() {
+        FutureCommonResponse commonResponse = client.getPublicQDeal("btc_usdt", 10);
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQDepth() {
+        FutureCommonResponse commonResponse = client.getPublicQDepth("btc_usdt", 1);
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQSymbolIndexPrice() {
+        FutureCommonResponse commonResponse = client.getPublicQSymbolIndexPrice("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQSymbolIndexPriceList() {
+        FutureCommonResponse commonResponse = client.getPublicQIndexPrice();
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQSymbolIndexPriceDetail() {
+        FutureCommonResponse commonResponse = client.getPublicQSymbolMarkPrice("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQMarketPrice() {
+        FutureCommonResponse commonResponse = client.getPublicQMarketPrice("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
     public void getBestPrice() {
         FutureCommonResponse commonResponse = client.getBestPrice("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQKline() {
+        FutureCommonResponse commonResponse = client.getPublicQKline("btc_usdt", "3m", null, null, null);
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQAggTicker() {
+        FutureCommonResponse commonResponse = client.getPublicQAggTicker("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQFundingRate() {
+        FutureCommonResponse commonResponse = client.getPublicQFundingRate("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQTickerBook() {
+        FutureCommonResponse commonResponse = client.getPublicQTickerBook("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicQFundingRateRecord() {
+        FutureCommonResponse commonResponse = client.getPublicQFundingRateRecord("btc_usdt", null, null, 1L);
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicContractRiskBalance() {
+        FutureCommonResponse commonResponse = client.getPublicContractRiskBalance("btc_usdt", null, null, 2L);
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicContractOpenInterest() {
+        FutureCommonResponse commonResponse = client.getPublicContractOpenInterest("btc_usdt");
         System.out.println(gson.toJson(commonResponse));
     }
 
@@ -65,7 +167,7 @@ public class UFutureApiClientTest {
                 .positionSide("LONG")
                 .build();
         FutureCommonResponse commonResponse = client.postOrder(request);
-        System.out.println("result:"+commonResponse);
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
 
     @Test
@@ -90,27 +192,29 @@ public class UFutureApiClientTest {
         requestList.add(request);
         requestList.add(request2);
         FutureCommonResponse commonResponse = client.batchOrder(requestList);
-        System.out.println("result:"+commonResponse);
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
 
     @Test
     public void orderListHistory() {
         Map<String, String> params = new HashMap<>();
+        params.put("limit", "1");
         FutureCommonResponse commonResponse = client.orderListHistory(params);
-        System.out.println("result:"+commonResponse);
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
 
     @Test
     public void orderTradeList() {
         Map<String, String> params = new HashMap<>();
+        params.put("limit", "1");
         FutureCommonResponse commonResponse = client.orderTradeList(params);
-        System.out.println("result:"+commonResponse);
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
 
     @Test
     public void orderDetail() {
-        FutureCommonResponse commonResponse = client.orderDetail(275110136488455424L);
-        System.out.println("result:"+commonResponse);
+        FutureCommonResponse commonResponse = client.orderDetail(554854882113899648L);
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
     @Test
     public void orderList() {
