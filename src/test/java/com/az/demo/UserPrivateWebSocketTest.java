@@ -65,6 +65,7 @@ public class UserPrivateWebSocketTest {
 
         List<String> params = new ArrayList<>();
         params.add("balance@"+listenKey);
+        params.add("order@"+listenKey);
 
         RequestMessage requestMessage = RequestMessage.builder()
                 .id("001")

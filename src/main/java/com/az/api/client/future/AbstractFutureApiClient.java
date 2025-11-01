@@ -24,6 +24,31 @@ public abstract class AbstractFutureApiClient implements FutureApiClient {
     }
 
     @Override
+    public FutureCommonResponse getPublicSymbolCoins() {
+        return executeSync(getService().getPublicSymbolCoins());
+    }
+
+    @Override
+    public FutureCommonResponse getPublicSymbolDetail(String symbol) {
+        return executeSync(getService().getPublicSymbolDetail(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getPublicSymbolList() {
+        return executeSync(getService().getPublicSymbolList());
+    }
+
+    @Override
+    public FutureCommonResponse getBestPrice(String symbol) {
+        return executeSync(getService().getBestPrice(symbol));
+    }
+
+    @Override
+    public FutureCommonResponse getOrderSlim(Long orderId){
+        return executeSync(getService().getOrderSlim(orderId));
+    }
+
+    @Override
     public FutureCommonResponse postOrder(FuturePostOrderRequest request) {
         return executeSync(getService().postOrder(request));
     }

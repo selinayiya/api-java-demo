@@ -16,6 +16,16 @@ public interface FutureApiClient {
 
     FutureCommonResponse getPublicClient();
 
+    FutureCommonResponse getPublicSymbolCoins();
+
+    FutureCommonResponse getPublicSymbolDetail(String symbol);
+
+    FutureCommonResponse getPublicSymbolList();
+
+    FutureCommonResponse getBestPrice(String symbol);
+
+    FutureCommonResponse getOrderSlim(Long orderId);
+
     FutureCommonResponse postOrder(FuturePostOrderRequest request);
 
     FutureCommonResponse batchOrder(List<FuturePostOrderRequest> futurePostOrderRequestList);

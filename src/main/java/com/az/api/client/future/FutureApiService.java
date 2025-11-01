@@ -17,6 +17,21 @@ public interface FutureApiService {
     @GET("/az/future/public/client")
     Call<FutureCommonResponse> getPublicClient();
 
+    @GET("/az/future/market/v1/public/symbol/coins")
+    Call<FutureCommonResponse> getPublicSymbolCoins();
+
+    @GET("/az/future/market/v1/public/symbol/detail")
+    Call<FutureCommonResponse> getPublicSymbolDetail(@Query("symbol") String symbol);
+
+    @GET("/az/future/market/v3/public/symbol/list")
+    Call<FutureCommonResponse> getPublicSymbolList();
+
+    @GET("/az/future/market/v1/public/q/best-price")
+    Call<FutureCommonResponse> getBestPrice(@Query("symbol") String symbol);
+
+    @GET("/az/future/trade/v1/order/slim")
+    Call<FutureCommonResponse> getOrderSlim(@Query("orderId") Long orderId);
+
     @POST("/az/future/trade/v1/order/create")
     Call<FutureCommonResponse> makeOrder(@QueryMap Map<String, String> params);
 

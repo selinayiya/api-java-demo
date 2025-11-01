@@ -21,7 +21,37 @@ public class UFutureApiClientTest {
     @Test
     public void getPublicClient() {
         FutureCommonResponse publicClient = client.getPublicClient();
-        System.out.println(publicClient);
+        System.out.println(gson.toJson(publicClient));
+    }
+
+    @Test
+    public void getPublicSymbolCoins() {
+        FutureCommonResponse publicSymbolCoins = client.getPublicSymbolCoins();
+        System.out.println(gson.toJson(publicSymbolCoins));
+    }
+
+    @Test
+    public void getPublicSymbolDetail() {
+        FutureCommonResponse commonResponse = client.getPublicSymbolDetail("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getPublicSymbolList() {
+        FutureCommonResponse commonResponse = client.getPublicSymbolList();
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getBestPrice() {
+        FutureCommonResponse commonResponse = client.getBestPrice("btc_usdt");
+        System.out.println(gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getOrderSlim() {
+        FutureCommonResponse commonResponse = client.getOrderSlim(17249182446388224L);
+        System.out.println(gson.toJson(commonResponse));
     }
 
     @Test
