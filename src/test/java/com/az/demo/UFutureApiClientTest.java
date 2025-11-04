@@ -219,6 +219,7 @@ public class UFutureApiClientTest {
     @Test
     public void orderList() {
         Map<String, String> params = new HashMap<>();
+        params.put("symbol", "btc_usdt");
         FutureCommonResponse commonResponse = client.orderList(params);
         System.out.println("result:"+commonResponse);
     }
@@ -276,12 +277,24 @@ public class UFutureApiClientTest {
     @Test
     public void listenKey() {
         FutureCommonResponse commonResponse = client.listenKey();
-        System.out.println("result:"+commonResponse);
+        System.out.println("result:"+gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void listBalance() {
+        FutureCommonResponse commonResponse = client.listBalance();
+        System.out.println("result:"+gson.toJson(commonResponse));
+    }
+
+    @Test
+    public void getBalance() {
+        FutureCommonResponse commonResponse = client.getBalance();
+        System.out.println("result:"+gson.toJson(commonResponse));
     }
 
     @Test
     public void adjustLeverage() {
-        FutureCommonResponse commonResponse = client.adjustLeverage("btc_usdt","LONG",5);
+        FutureCommonResponse commonResponse = client.adjustLeverage("btc_usdt","LONG",20);
         System.out.println("result:"+commonResponse);
     }
 

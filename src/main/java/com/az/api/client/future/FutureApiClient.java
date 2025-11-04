@@ -92,6 +92,10 @@ public interface FutureApiClient {
 
     FutureCommonResponse listenKey();
 
+    FutureCommonResponse listBalance();
+
+    FutureCommonResponse getBalance();
+
     FutureCommonResponse adjustLeverage(String symbol,String positionSide,Integer leverage);
 
 }

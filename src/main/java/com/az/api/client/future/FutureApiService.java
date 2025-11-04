@@ -133,6 +133,11 @@ public interface FutureApiService {
     @GET("/az/future/user/v1/user/listen-key")
     Call<FutureCommonResponse> listenKey();
 
+    @GET("/az/future/user/v1/balance/list")
+    Call<FutureCommonResponse> listBalance();
+
+    @GET("/az/future/cache/v1/balance")
+    Call<FutureCommonResponse> getBalance();
 
     @POST("/az/future/user/v1/position/adjust-leverage")
     @Headers("Content-Type: application/x-www-form-urlencoded")

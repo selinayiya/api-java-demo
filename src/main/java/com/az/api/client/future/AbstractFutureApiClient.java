@@ -202,6 +202,16 @@ public abstract class AbstractFutureApiClient implements FutureApiClient {
     }
 
     @Override
+    public FutureCommonResponse listBalance() {
+        return executeSync(getService().listBalance());
+    }
+
+    @Override
+    public FutureCommonResponse getBalance() {
+        return executeSync(getService().getBalance());
+    }
+
+    @Override
     public FutureCommonResponse adjustLeverage(String symbol,String positionSide,Integer leverage){
         return executeSync(getService().adjustLeverage(symbol,positionSide,leverage));
     }
